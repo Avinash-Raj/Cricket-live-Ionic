@@ -127,7 +127,7 @@ angular.module('starter', ['ionic'])
       $http.get('http://cricapi.com/api/cricketCommentary', {
         params: {unique_id: $scope.whichmatch}
       }).success(function(data) {
-        $scope.commentary = data.commentary.replace(/<.*?>/g, '');
+        $scope.commentary = '<br/>'+ data.commentary;
       });
 
       $scope.doRefresh =function() {
@@ -150,7 +150,8 @@ angular.module('starter', ['ionic'])
         $http.get('http://cricapi.com/api/cricketCommentary', {
           params: {unique_id: $scope.whichmatch}
         }).success(function(data) {
-          $scope.commentary = data.commentary.replace(/<.*?>/g, '');
+
+          $scope.commentary = '<br/>'+ data.commentary;
         });
 
       };

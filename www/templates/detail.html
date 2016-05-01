@@ -3,7 +3,7 @@
 </ion-header-bar>
 
 <ion-view>
-  <ion-content>
+  <ion-content padding="true" class="padding">
       <ion-refresher  on-refresh="doRefresh()">
       </ion-refresher>
     <ion-list class="list-inset">
@@ -11,9 +11,9 @@
         <p>{{score.day}} </p>
           <b>{{score.info}}</b>
       </ion-item>
-        <ion-item>
-            <p>{{commentary}}</p>
-        </ion-item>
+
+        <div ng-bind-html="commentary"></div>
+
     </ion-list>
   </ion-content>
 </ion-view>
