@@ -1,0 +1,22 @@
+<ion-view view-title="News">
+
+<div class="bar bar-subheader 
+  item-input-inset bar-light">
+  <label class="item-input-wrapper">
+    <i class="icon ion-search placeholder-icon"></i>
+    <input type="search" ng-model="query" placeholder="Search">
+  </label>
+</div>
+
+<ion-content class="has-subheader">
+<div class="day" ng-repeat="(newsIndex, news) in newsData">
+  <div class="item item-divider item-divider-calm">
+    <!--{{newsIndex}}-->
+  </div><!-- item divider -->
+  <div ng-show="news.title" class="item item-list item-text-wrap dayhighlight">
+    <h2>{{news.title}}</h2>
+    {{news.description}}
+  </div><!-- day title -->
+</div>
+</ion-content>
+</ion-view>
